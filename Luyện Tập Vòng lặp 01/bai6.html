@@ -1,0 +1,27 @@
+<!-- Tính tổng 30 số tự nhiên chia hết cho 7 đầu tiên -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of First 30 Natural Numbers Divisible by 7</title>
+</head>
+<body>
+    <script>
+        let count = 0; // Biến đếm số lượng số đã tìm được
+        let number = 1; // Bắt đầu từ số tự nhiên đầu tiên
+
+        let sum = 0; // Biến tổng các số chia hết cho 7
+
+        while (count < 30) {
+            if (number % 7 === 0) {
+                sum += number; // Nếu số hiện tại chia hết cho 7, cộng vào tổng
+                count++; // Tăng biến đếm lên sau khi tìm được số chia hết cho 7
+            }
+            number++; // Tăng số tự nhiên lên để kiểm tra số tiếp theo
+        }
+
+        document.write("<strong>Tổng của 30 số tự nhiên đầu tiên chia hết cho 7 là: " + sum + "</strong>");
+    </script>
+</body>
+</html>

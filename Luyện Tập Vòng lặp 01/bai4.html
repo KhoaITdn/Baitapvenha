@@ -1,0 +1,58 @@
+ <!-- tìm số đầu tiên trong dãy F chia hết cho 5  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let first = 0 ;
+    let second = 1;
+    let next =0;
+        while( true){
+            next = first + second;
+            first = second;
+            second = next ;
+            if( first % 5 === 0 ){
+                document.write(" So fibonanci dau tien chia het cho 5 la: " + first);
+                break;
+            }
+        }
+</script> 
+</body>
+</html>
+
+
+<!-- tìm số F thứ 2 chia hết cho 5
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Fibonacci Number Divisible by 5</title>
+</head>
+<body>
+    <script>
+        let count = 0; // Biến đếm số lượng số Fibonacci chia hết cho 5
+        let first = 0;
+        let second = 1;
+        let next = 0;
+
+        while (count < 2) { // Tìm số Fibonacci thứ 2 chia hết cho 5
+            next = first + second;
+            first = second;
+            second = next;
+
+            if (first % 5 === 0) {
+                count++; // Tăng biến đếm khi tìm được số Fibonacci chia hết cho 5
+                if (count === 2 ) {
+                    document.write("Số Fibonacci thứ 2 chia hết cho 5 là: " + first);
+                }
+            }
+        }
+    </script>
+</body>
+</html>  -->
