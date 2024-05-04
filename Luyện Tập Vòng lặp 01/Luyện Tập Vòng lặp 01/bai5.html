@@ -1,0 +1,25 @@
+<!-- tính tổng 20 số F đầu tiên  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    sum = 0;
+    let first = 0;
+    let second = 1;
+    let next = 0;
+    for ( let i =0; i < 20; i++){
+        document.write(first + "<br>");
+        sum += first;
+        next = first + second;
+        first = second;
+        second = next;
+    }
+    document.write("sum cua 20 so dau tien la : " + sum );
+</script>  
+</body>
+</html>
