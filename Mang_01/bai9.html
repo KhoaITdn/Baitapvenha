@@ -1,0 +1,32 @@
+<!-- Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+ Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+ Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c. -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+<script>
+    // Cách 1: dùng concat
+    // let a = [1,2,3,4,5,6,7,8,9,10];
+    // let b = [12,13,14,15,16,17,18,19,20,21];
+    // let c = a.concat(b);
+    // document.write(c);
+
+    // cách 2 ; dùng vòng lặp 
+
+    let a = [1,2,3,4,5,6,7,8,9,10];
+    let b = [12,13,14,15,16,17,18,19,20,21];
+    let c = [];
+    for( let i =0; i< a.length; i ++){
+        c[i] = a[i];
+        c[i+10]= b[i];
+    }document.write(c);
+
+</script>
+ </body>
+ </html>

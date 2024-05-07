@@ -1,0 +1,28 @@
+<!-- Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. 
+Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let arr = [1,3,5,7,9,12,15,17,20,22];
+
+    //// Khởi tạo biến lưu giá trị lớn nhất và vị trí của phần tử đó
+    let max = arr[0]; // Giả sử phần tử đầu tiên là lớn nhất ban đầu
+    let maxIndex = 0;
+
+    for(let i =0 ; i <arr.length; i++){
+        if(arr[i] > max ){
+            max = arr[i]; // cập nhật giá trị lớn nhất
+            maxIndex =i;  // cập nhật vị trí lớn nhất 
+        }
+    }
+    document.write("Phần tử có giá trị lớn nhất trong mảng là : " +max + "<br>");
+    document.write("Vị trí của phần tử đó trong mảng là : " +maxIndex);
+</script>
+</body>
+</html>

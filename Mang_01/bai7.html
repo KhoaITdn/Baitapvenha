@@ -1,0 +1,65 @@
+<!-- Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+ Chương trình kiểm tra xem V có thuộc mảng đã cho không,
+nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
+ và gán 0 cho phần tử cuối cùng của mảng) -->
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Check and Remove Element from Array</title>
+ </head>
+ <body>
+ <script>
+    //  let V = +prompt("Nhập phần tử số nguyên V:");
+    //  let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+ 
+    //  // Kiểm tra xem V có nằm trong mảng arr không
+    //  let isInArray = arr.includes(V);
+ 
+    //  if (isInArray) {
+    //      // Tìm và xoá phần tử V khỏi mảng arr
+    //      for (let i = 0; i < arr.length; i++) {
+    //          if (arr[i] === V) {
+    //              // Dịch các phần tử bên phải V sang trái để ghi đè lên V
+    //              for (let j = i; j < arr.length - 1; j++) {
+    //                  arr[j] = arr[j + 1];
+    //              }
+    //              // Gán giá trị 0 cho phần tử cuối cùng của mảng
+    //              arr[arr.length - 1] = 0;
+ 
+    //              document.write("Phần tử " + V + " đã được xoá khỏi mảng.<br>");
+    //              break; // Kết thúc khi đã xoá V thành công
+    //          } 
+    //      }
+    //  } else {
+    //      document.write("Phần tử " + V + " không tồn tại trong mảng.<br>");
+    //  }
+ 
+    //  document.write("Mảng sau khi xoá phần tử " + V + ": " + arr);
+
+    
+    let arr = [200,400,400,400,400,404,404,500,403];
+    let number = +prompt(" Nhap so can xoa : ");
+    let check = false;
+    for ( let i =0; i <arr.length; i ++){
+        if(arr[i] === number) {
+            check = true;
+            for(let j = i; j < arr.length -1; j ++) {
+                arr[j] = arr[j +1];
+            }
+            arr[arr.length -1] =0;
+            i--;
+        }
+    }
+    if(check){
+        document.write("Co ton tai. Mang sau khi xoa la " + arr);
+    }else {
+        document.write("Khong ton tai");
+    }
+
+ </script>
+ </body>
+ </html>
+ 

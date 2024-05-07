@@ -1,0 +1,43 @@
+<!-- Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+Chương trình tìm xem V có nằm trong mảng số nguyên không? 
+Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // let V = +prompt(" Nhập phần tử số nguyên V : ");
+    // let arr =[0,1,2,3,4,5,6,7,8,9];
+
+    // // Kiểm tra xem V có nằm trong mảng arr không
+    // let isInArray = arr.includes(V);
+
+    // // Hiển thị kết quả dựa trên kiểm tra
+    //     if (isInArray) {
+    // document.write(V + " is in the array");
+    //     } else {
+    // document.write(V + " is not in the array");
+    //     }
+
+
+    let arr = [200,400,404,500,403];
+    let number = +prompt(" Nhap so can tim : ");
+    let check = false;
+    for ( let i =0; i <arr.length; i ++){
+        if(arr[i] === number) {
+            check = true;
+
+        }
+    }
+    if(check){
+        document.write("Co ton tai");
+    }else {
+        document.write("Khong ton tai");
+    }
+</script>
+</body>
+</html>
