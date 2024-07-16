@@ -1,0 +1,15 @@
+xây dựng quản lý sinh viên bằng arraylist
+gồm : mã sinh viên ; họ tên sinh viên ; năm sinh ; điểm trung bình 
+
+có thể expand thêm giảng viên 
+
+Yêu cầu : 
+thêm sinh viên vào danh sách
+in danh sach sinh vien ra mafn hifnh
+kiểm tra danh sách có rỗng hay không
+lấy ra số lượng sinh viên trong danh sách
+làm rỗng dnah sách sinh viên
+xóa 1 sinh viên ra khỏi danh sách dựa trên mã sinh viên đó
+kiểm tra sinh viên có tồn tại trong danh sách hay không , dựa trên mã sinh viên
+tìm kiếm 1 sinh viên dựa trên Tên nhập từ bàn phím
+Xuất ra dnah sách sinh viên có điểm từ cao đến thấp
