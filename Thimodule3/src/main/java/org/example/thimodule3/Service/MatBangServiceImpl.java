@@ -28,8 +28,8 @@ public class MatBangServiceImpl implements IMatBangService {
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
                 String maMb = resultSet.getString("MaMatBang");
-                double dienTich = resultSet.getDouble("DienTich");
                 int trThai = resultSet.getInt("TrangThai");
+                double dienTich = resultSet.getDouble("DienTich");
                 int tang = resultSet.getInt("Tang");
                 int loaiVp = resultSet.getInt("LoaiMatBang");
                 double giaThue = resultSet.getDouble("GiaTien");
