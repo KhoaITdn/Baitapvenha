@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hojo Tokiyuki S Size Plush - The Elusive Samurai | SEGA Plush Toy</title>
+  <link rel="stylesheet" href="/css/view_product.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">7hFIGURE</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Bạn đang tìm gì...">
+      </div>
+      <div class="nav-links">
+        <a href="#">Đăng nhập</a>
+        <a href="#">Đăng ký</a>
+        <a href="#">Giỏ hàng (0)</a>
+      </div>
+    </div>
+  </div>
+</header>
+<nav>
+  <div class="container">
+    <ul>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">Chính sách giao hàng & đổi trả</a></li>
+      <li><a href="#">Tra cứu đơn hàng đặt trước</a></li>
+      <li><a href="#">Tính giá gom hàng</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Tin tức</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <div class="product-container">
+      <div class="product-image">
+        <img src="/placeholder.svg?height=400&width=400" alt="Hojo Tokiyuki S Size Plush">
+        <div class="thumbnail-container">
+          <img src="/placeholder.svg?height=60&width=60" alt="Thumbnail 1" class="thumbnail">
+          <img src="/placeholder.svg?height=60&width=60" alt="Thumbnail 2" class="thumbnail">
+          <img src="/placeholder.svg?height=60&width=60" alt="Thumbnail 3" class="thumbnail">
+          <img src="/placeholder.svg?height=60&width=60" alt="Thumbnail 4" class="thumbnail">
+        </div>
+      </div>
+      <div class="product-details">
+        <h1 class="product-title">Hojo Tokiyuki S Size Plush - The Elusive Samurai | SEGA Plush Toy</h1>
+        <div class="product-meta">
+          <span>Thương hiệu: SEGA</span> | <span>Loại: Plush</span>
+        </div>
+        <div class="product-price">100,000đ</div>
+        <div class="quantity-selector">
+          <span>Số lượng:</span>
+          <button onclick="decrementQuantity()">-</button>
+          <input type="number" id="quantity" value="1" min="1">
+          <button onclick="incrementQuantity()">+</button>
+        </div>
+        <a href="#" class="add-to-cart">THÊM VÀO GIỎ HÀNG</a>
+        <a href="#" class="buy-now">MUA NGAY</a>
+        <div class="shipping-info">
+          <h3>Thông tin vận chuyển:</h3>
+          <ul>
+            <li>🚚 Giao hàng toàn quốc đơn hàng từ 99k</li>
+            <li>💰 COD nội thành HN, HCM</li>
+            <li>🔄 Đổi trả trong 24h</li>
+            <li>🚚 Hỗ trợ ship 20k cho đơn hàng từ 300k nội thành HN, HCM</li>
+            <li>🚚 Hỗ trợ ship 30k cho đơn hàng từ 500k các khu vực khác</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+  function incrementQuantity() {
+    var input = document.getElementById('quantity');
+    input.value = parseInt(input.value) + 1;
+  }
+  function decrementQuantity() {
+    var input = document.getElementById('quantity');
+    if (parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+</script>
+</body>
+</html>

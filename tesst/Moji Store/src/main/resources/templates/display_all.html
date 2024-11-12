@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gundam / Plastic Model / Tokusatsu Toys - 7hFIGURE</title>
+    <link rel="stylesheet" href="/css/display_all.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="top-bar">
+            <div class="logo">7hFIGURE</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Bạn đang tìm gì...">
+            </div>
+            <div class="user-actions">
+                <a href="#">Hotline: 0396696826</a>
+                <a href="#">Hệ thống cửa hàng</a>
+                <a href="#">Tài khoản của bạn</a>
+                <a href="#">Sản phẩm yêu thích (0)</a>
+                <a href="#">Giỏ hàng (0)</a>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="nav">
+    <div class="container">
+        <div class="nav-items">
+            <a href="#">MENU</a>
+            <a href="#">Chính sách giao hàng & đổi trả</a>
+            <a href="#">Tra cứu đơn hàng đặt trước</a>
+            <a href="#">Tính giá gom hàng</a>
+            <a href="#">FAQ</a>
+            <a href="#">Tin tức</a>
+        </div>
+    </div>
+</nav>
+<main class="container">
+    <div class="breadcrumb">
+        <a href="#">Trang chủ</a> / <a href="#">Gundam / Plastic Model / Tokusatsu Toys</a>
+    </div>
+    <h1>Gundam / Plastic Model / Tokusatsu Toys</h1>
+    <div class="filters">
+        <div>Sắp xếp:</div>
+        <div class="sort-options">
+            <div class="sort-option active">Nổi bật</div>
+            <div class="sort-option">Giá: Tăng dần</div>
+            <div class="sort-option">Giá: Giảm dần</div>
+            <div class="sort-option">Mới nhất</div>
+        </div>
+    </div>
+    <div class="main-content">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Đặt hàng</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="pre-order">
+                    <label for="pre-order">Pre-Order</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="order">
+                    <label for="order">Order</label>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Thương hiệu</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="max-factory">
+                    <label for="max-factory">Max Factory</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="good-smile-company">
+                    <label for="good-smile-company">Good Smile Company</label>
+                </div>
+                <!-- Add more brand options as needed -->
+            </div>
+            <div class="filter-section">
+                <h3>Lọc Giá</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="under-500k">
+                    <label for="under-500k">Dưới 500,000đ</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="500k-2m">
+                    <label for="500k-2m">500,000đ - 2,000,000đ</label>
+                </div>
+                <!-- Add more price range options as needed -->
+            </div>
+        </aside>
+        <section class="product-grid">
+            <!-- Vòng lặp sản phẩm -->
+            <div th:each="p : ${list}" class="product-card">
+                <div class="product-image" style="cursor: pointer;"
+                     th:data="@{/view/{id}(id=${p.id})}"
+                     th:onclick="'window.location.href=\'' + @{/view/{id}(id=${p.id})} + '\''">
+                    <img th:src="${p.image}" alt="Product Image" />
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title" th:text="${p.name}">Tên Sản Phẩm</h3>
+                    <div class="product-price">
+                        <span th:text="${p.price} + 'đ'">Giá</span>
+                    </div>
+                    <div class="discount-badge" th:text="${p.description}"></div> <!-- Nếu có giảm giá -->
+                    <button class="favorite-button">♡</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông tin giao hàng - 7hFIGURE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff4500;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .breadcrumb a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    h1, h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .user-name {
+      font-weight: bold;
+    }
+    .logout {
+      color: #0066cc;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 12 12'%3E%3Cpath d='M10.293 3.293a1 1 0 011.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L6 7.586l4.293-4.293z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+    }
+    .address-details {
+      display: flex;
+      gap: 10px;
+    }
+    .address-details .form-control {
+      flex: 1;
+    }
+    .pickup-option {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .pickup-option input {
+      margin-right: 5px;
+    }
+    .shipping-method, .payment-method {
+      margin-top: 20px;
+    }
+    .shipping-method-placeholder {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+    }
+    .payment-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .payment-option input {
+      margin-right: 10px;
+    }
+    .payment-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .payment-details {
+      display: none; /* Ẩn phần mô tả ban đầu */
+
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .btn-secondary {
+      background-color: #f0f0f0;
+      color: #333;
+      }
+
+      .payment-icon {
+        width: 60px;
+        height: 30px;
+        margin-right: 10px;
+        object-fit: contain;
+      }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">7hFIGURE</div>
+  <div class="breadcrumb">
+    <a href="#">Giỏ hàng</a> &gt; Thông tin giao hàng
+  </div>
+  <h1>Thông tin giao hàng</h1>
+  <div class="user-info">
+    <div class="user-avatar"></div>
+    <div>
+      <span class="user-name">Khoa Huỳnh (khoabkdn2003@gmail.com)</span>
+      <a href="#" class="logout">Đăng xuất</a>
+    </div>
+  </div>
+  <form>
+    <div class="form-group">
+      <select class="form-control form-select">
+        <option>Thêm địa chỉ mới...</option>
+        <option selected>70000, Vietnam</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Khoa Huỳnh" value="Khoa Huỳnh">
+    </div>
+    <div class="form-group">
+      <input type="tel" class="form-control" placeholder="Số điện thoại">
+    </div>
+    <div class="form-group">
+      <div class="address-details">
+        <select class="form-control form-select">
+          <option>Chọn tỉnh / thành</option>
+        </select>
+        <select class="form-control form-select">
+          <option>Chọn quận / huyện</option>
+        </select>
+        <select class="form-control form-select">
+          <option>Chọn phường / xã</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Địa chỉ">
+    </div>
+    <div class="pickup-option">
+      <input type="checkbox" id="pickup">
+      <label for="pickup">Nhận tại cửa hàng</label>
+    </div>
+    <div class="shipping-method">
+      <h2>Phương thức vận chuyển</h2>
+      <div class="shipping-method-placeholder">
+        <img src="/placeholder.svg?height=50&width=50" alt="Shipping icon">
+        <p>Vui lòng chọn tỉnh / thành để có danh sách phương thức vận chuyển.</p>
+      </div>
+    </div>
+    <div class="payment-method">
+      <h2>Phương thức thanh toán</h2>
+      <div class="payment-option">
+        <input type="radio" id="cod" name="payment" onclick="togglePaymentDetails('codDetails')">
+        <img src="https://hstatic.net/0/0/global/design/seller/image/payment/cod.svg?v=6" alt="COD icon" class="payment-icon">
+        <label for="cod">Thanh toán khi giao hàng (COD)</label>
+      </div>
+      <div class="payment-details" id="codDetails">
+        <p>- Thanh toán COD KHÔNG áp dụng cho sản phẩm Đặt Trước (tag Pre-order/Order)</p>
+        <p>- Đơn hàng trên 1000K sẽ thu thêm phí thu hộ & bảo hiểm tối thiểu 30K tùy theo giá trị đơn hàng</p>
+        <p>- Chúng tôi sẽ liên hệ qua Zalo/Email để xác nhận đơn hàng</p>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="vnpay" name="payment" onclick="togglePaymentDetails('vnpayDetails')">
+        <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Icon-VNPAY-QR.png" alt="VNPay icon" class="payment-icon">
+        <label for="vnpay">VNPay</label>
+      </div>
+      <div class="payment-details" id="vnpayDetails">
+        <p>- Thanh toán qua VNPAY là phương thức nhanh chóng và tiện lợi.</p>
+        <p>- Đơn hàng sẽ được xác nhận ngay sau khi bạn hoàn tất giao dịch.</p>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="paypal" name="payment" onclick="togglePaymentDetails('paypalDetails')">
+        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal icon" class="payment-icon">
+        <label for="paypal">PayPal</label>
+      </div>
+      <div class="payment-details" id="paypalDetails">
+        <p>- Thanh toán qua PayPal là phương thức quốc tế an toàn và bảo mật.</p>
+        <p>- Vui lòng đảm bảo tài khoản PayPal của bạn đã được nạp đủ tiền.</p>
+      </div>
+    </div>
+  </form>
+  <div style="margin-top: 20px; text-align: center; font-size: 12px; color: #666;">
+    Powered by Haravan
+  </div>
+
+
+</div>
+
+<script>
+  function togglePaymentDetails(selectedId) {
+    // Ẩn tất cả các phần mô tả
+    const details = document.querySelectorAll('.payment-details');
+    details.forEach(detail => detail.style.display = 'none');
+
+    // Hiện phần mô tả cho phương thức thanh toán đã chọn
+    const selectedDetail = document.getElementById(selectedId);
+    if (selectedDetail) {
+      selectedDetail.style.display = 'block';
+    }
+  }
+</script>
+</body>
+
+</html>
